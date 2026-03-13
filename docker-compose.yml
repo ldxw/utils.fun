@@ -1,0 +1,12 @@
+services:
+  utils-fun:
+    image: ghcr.io/ldxw/utils.fun:latest
+    container_name: utils-fun
+    restart: unless-stopped
+    ports:
+      - "3000:3000"
+    env_file:
+      - .env
+networks:
+  utils-fun:
+    driver: bridge
